@@ -22,6 +22,11 @@ int main()
 
     for (i = 1; scanf("%lf", &x) == 1; ++i)
     {
+        /* the .1 and .3 denote how many places to the right of the decimal in float to print
+
+        TODO: how does it know to align the numbers to the right?
+        Theory: the 15 declars how far right to print it, but then inserts the text to the left of that point
+        */
         printf("\n%12d%12.1f%15.3f", i, x, sum += x);
     }
 
