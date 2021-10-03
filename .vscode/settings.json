@@ -35,5 +35,8 @@
         "**/Module.symvers": true,
         "**/Mkfile.old": true,
         "**/dkms.conf": true
+    },
+    "files.associations": {
+        "ex_4.C": "cpp"
     }
 }
