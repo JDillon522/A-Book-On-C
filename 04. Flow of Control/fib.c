@@ -6,10 +6,7 @@
 int main()
 {
     // f(sub i+1) = f(sub i) + f(sub i - 1)
-    int fibs[SIZE_OF_FIBS];
-    fibs[0] = 0;
-    fibs[1] = 1;
-    fibs[2] = 1;
+    int fibs[SIZE_OF_FIBS] = {0, 1, 2};
 
     for (int i = 0; i < SIZE_OF_FIBS; i++)
     {

@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "cl.exe - Build and debug active file",
+            "name": "Build Single File",
             "type": "cppvsdbg",
             "request": "launch",
             "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
@@ -15,6 +15,47 @@
             "environment": [],
             "console": "externalTerminal",
             "preLaunchTask": "C/C++: cl.exe build active file"
-        }
+        },
+        {
+            "name": "Build Whole Dir",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "console": "externalTerminal",
+            "preLaunchTask": "Build Dir"
+        },
+        {
+            "name": "Debug typescript",
+            "type": "node",
+            "request": "launch",
+            "smartStep": false,
+            "sourceMaps": true,
+            "args": [
+                "${file}"
+            ],
+            "runtimeArgs": [
+             "-r",
+             "ts-node/register/transpile-only"
+            ],
+            "cwd": "${workspaceRoot}",
+            "protocol": "inspector",
+            "internalConsoleOptions": "openOnSessionStart",
+            "env": {
+             "TS_NODE_FILES": "true" // Respect include/exclude in tsconfig.json => will read declaration files  (ts-node --files src\index.ts)
+            },
+            "skipFiles": [
+             "<node_internals>/*",
+             "<node_internals>/**",
+             "<node_internals>/**/*",
+             "${workspaceRoot}/node_modules/**",
+             "${workspaceRoot}/node_modules/**/*"
+            ],
+            "outputCapture": "std",
+            "stopOnEntry": false
+           }
     ]
 }

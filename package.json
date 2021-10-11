@@ -1,0 +1,24 @@
+{
+  "name": "abc-typescript-exercises",
+  "version": "1.0.0",
+  "description": "For my typescript convesions of specific C things",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JDillon522/A-Book-On-C.git"
+  },
+  "author": "Joseph Dillon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JDillon522/A-Book-On-C/issues"
+  },
+  "homepage": "https://github.com/JDillon522/A-Book-On-C#readme",
+  "dependencies": {
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3",
+    "typesync": "^0.8.0"
+  }
+}
