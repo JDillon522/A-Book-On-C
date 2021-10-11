@@ -20,8 +20,11 @@ void mergesort(int arrToSort[], int arraySize)
     // useful for real situations where the heap might be full
     assert(dynamicArray != NULL);
 
+    // start comparing arrays of 1, the last iteration will be arraySize/2.
+    // On the following check the stepSize will double, equaling the size of the array
     for (stepSize = 1; stepSize < arraySize; stepSize *= 2)
     {
+        // For each step size
         for (arrA = 0; arrA < arraySize - stepSize; arrA += 2 * stepSize)
         {
             // merge two sub arrays of arrToSort[] into a sub array of dynamicArray[]
